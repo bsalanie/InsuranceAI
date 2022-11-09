@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "InsuranceAI"
+  site-url: "https://bsalanie.github.io/InsuranceAI"
+  description: "Testing for Asymmetric Information in Insurance with Deep Learning"
+  repo-branch: main
+  repo-url: "https://github.com/bsalanie/InsuranceAI"
