@@ -6,6 +6,5 @@ d = { 'settings': { 'branch': 'main',
                 'git_url': 'https://github.com/bsalanie/InsuranceAI',
                 'lib_path': 'InsuranceAI'},
   'syms': { 'InsuranceAI.InsuranceAI': {},
-            'InsuranceAI.core': {'InsuranceAI.core.foo': ('core.html#foo', 'InsuranceAI/core.py')},
             'InsuranceAI.utils': { 'InsuranceAI.utils.read_data': ('utils.html#read_data', 'InsuranceAI/utils.py'),
                                    'InsuranceAI.utils.select_variables': ('utils.html#select_variables', 'InsuranceAI/utils.py')}}}
