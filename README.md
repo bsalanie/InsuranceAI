@@ -17,88 +17,6 @@ covariates.
 X.describe()
 ```
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Group</th>
-      <th>Male</th>
-      <th>Occupation</th>
-      <th>Region</th>
-      <th>Renault</th>
-      <th>Age category car</th>
-      <th>Age category insuree</th>
-      <th>Car use</th>
-      <th>Zone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>6333</td>
-      <td>6333</td>
-      <td>6333</td>
-      <td>6333</td>
-      <td>6333</td>
-      <td>6333</td>
-      <td>6333</td>
-      <td>6333</td>
-      <td>6333</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>6</td>
-      <td>2</td>
-      <td>8</td>
-      <td>10</td>
-      <td>2</td>
-      <td>12</td>
-      <td>9</td>
-      <td>4</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
-      <td>5</td>
-      <td>0</td>
-      <td>11</td>
-      <td>1</td>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>1272</td>
-      <td>3971</td>
-      <td>2865</td>
-      <td>1019</td>
-      <td>5046</td>
-      <td>1100</td>
-      <td>1354</td>
-      <td>2876</td>
-      <td>2626</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 ``` python
 lhs_vars = pd.DataFrame({
     'Comprehensive coverage': y1, 
@@ -107,129 +25,11 @@ lhs_vars = pd.DataFrame({
 lhs_vars.describe()
 ```
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Comprehensive coverage</th>
-      <th>Claim at fault</th>
-      <th>Duration</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>6333.000000</td>
-      <td>6333.000000</td>
-      <td>6333.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>0.368704</td>
-      <td>0.068530</td>
-      <td>0.630466</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.482491</td>
-      <td>0.252673</td>
-      <td>0.338334</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.002740</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.304110</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.657534</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>0.997260</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>0.997260</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 The matrix of $(y_1,y_2)$ is as follows:
 
 ``` python
 pd.crosstab(lhs_vars['Comprehensive coverage'], lhs_vars['Claim at fault'])
 ```
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Claim at fault</th>
-      <th>0</th>
-      <th>1</th>
-    </tr>
-    <tr>
-      <th>Comprehensive coverage</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3696</td>
-      <td>302</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2203</td>
-      <td>132</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 ``` python
 fig, ax = plt.subplots()
@@ -238,8 +38,6 @@ ax.set(xlabel="Proportion of the year covered", title="Weights")
 ax.legend()
 plt.show()
 ```
-
-![](index_files/figure-gfm/cell-5-output-1.png)
 
 ## first neural network
 
@@ -254,20 +52,3 @@ model.compile(optimizer="rmsprop",
               metrics=["accuracy"])
 model.fit(X.values[:3200,:], y1.values[:3200],epochs=5, batch_size=128)
 ```
-
-    Epoch 1/5
-     1/25 [>.............................] - ETA: 4s - loss: 5.9284 - accuracy: 0.4609
-
-    2022-11-11 22:40:14.896740: W tensorflow/core/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
-
-    25/25 [==============================] - 0s 472us/step - loss: 6.8158 - accuracy: 0.3550
-    Epoch 2/5
-    25/25 [==============================] - 0s 426us/step - loss: 6.2787 - accuracy: 0.3550
-    Epoch 3/5
-    25/25 [==============================] - 0s 401us/step - loss: 5.7850 - accuracy: 0.3550
-    Epoch 4/5
-    25/25 [==============================] - 0s 413us/step - loss: 5.2971 - accuracy: 0.3550
-    Epoch 5/5
-    25/25 [==============================] - 0s 352us/step - loss: 4.8120 - accuracy: 0.3537
-
-    <keras.callbacks.History>

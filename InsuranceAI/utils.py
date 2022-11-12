@@ -54,7 +54,8 @@ def read_data(dataset: str # "j88" or "jpropre"
                   'Bonus Malus', 'Age category car', 'Age category insuree', 'Basic premium category', 
                   'Shared responsibility', 'Car use', 'Zone'
                  ]
-    data = pd.read_csv(files('InsuranceAI.Datasets').joinpath(data_file), delimiter = ' ', header=None)
+    data_dir = Path(__file__).parent / 'Datasets'
+    data = pd.read_csv(data_dir / data_file, delimiter = ' ', header=None)
     data.columns = names_vars
     # we change the types of the non-categorical variables
     for float_col in ['Deductible damages', 'Deductible theft', 'Reimbursement', 'Total cost', 'Compulsory cost',
