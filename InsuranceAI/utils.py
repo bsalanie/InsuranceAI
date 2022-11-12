@@ -11,6 +11,7 @@ __all__ = ['DATA_PATH', 'GENERAL_RESULTS_FOLDER', 'PDF_FOLDER', 'DASH', 'PARAMET
 from sys import platform
 from typing import Tuple
 from pathlib import Path
+from importlib.resources import files
 import pandas as pd
 
 # %% ../nbs/00_utils.ipynb 4
@@ -53,7 +54,7 @@ def read_data(dataset: str # "j88" or "jpropre"
                   'Bonus Malus', 'Age category car', 'Age category insuree', 'Basic premium category', 
                   'Shared responsibility', 'Car use', 'Zone'
                  ]
-    data = pd.read_csv(DATA_PATH / data_file, delimiter = ' ', header=None)
+    data = pd.read_csv(files('Datasets').joinpath(data_file), delimiter = ' ', header=None)
     data.columns = names_vars
     # we change the types of the non-categorical variables
     for float_col in ['Deductible damages', 'Deductible theft', 'Reimbursement', 'Total cost', 'Compulsory cost',
