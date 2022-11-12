@@ -8,3 +8,4 @@ data88 = read_data("j88")
 
 # %% ../nbs/index.ipynb 6
 y1, y2, w, X = select_variables(data88)
+
