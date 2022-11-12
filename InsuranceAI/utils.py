@@ -16,7 +16,7 @@ import pandas as pd
 # %% ../nbs/00_utils.ipynb 4
 DATA_PATH = Path("..") / Path("Datasets")
 if platform in ["linux", "linux2"]:
-    DATA_PATH = Path("../Datasets")
+    DATA_PATH = Path("../../Datasets")
 
 GENERAL_RESULTS_FOLDER = Path("Results")
 PDF_FOLDER = Path("pdfs")
