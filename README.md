@@ -256,18 +256,18 @@ model.fit(X.values[:3200,:], y1.values[:3200],epochs=5, batch_size=128)
 ```
 
     Epoch 1/5
-    25/25 [==============================] - 0s 470us/step - loss: 1.6506 - accuracy: 0.6450
+     1/25 [>.............................] - ETA: 4s - loss: 5.9284 - accuracy: 0.4609
+
+    2022-11-11 22:40:14.896740: W tensorflow/core/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+
+    25/25 [==============================] - 0s 472us/step - loss: 6.8158 - accuracy: 0.3550
     Epoch 2/5
-    25/25 [==============================] - 0s 461us/step - loss: 1.3889 - accuracy: 0.6450
+    25/25 [==============================] - 0s 426us/step - loss: 6.2787 - accuracy: 0.3550
     Epoch 3/5
-    25/25 [==============================] - 0s 426us/step - loss: 1.1600 - accuracy: 0.6453
+    25/25 [==============================] - 0s 401us/step - loss: 5.7850 - accuracy: 0.3550
     Epoch 4/5
-     1/25 [>.............................] - ETA: 0s - loss: 1.0074 - accuracy: 0.6562
-
-    2022-11-11 14:41:43.397497: W tensorflow/core/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
-
-    25/25 [==============================] - 0s 467us/step - loss: 0.9567 - accuracy: 0.6484
+    25/25 [==============================] - 0s 413us/step - loss: 5.2971 - accuracy: 0.3550
     Epoch 5/5
-    25/25 [==============================] - 0s 426us/step - loss: 0.7940 - accuracy: 0.6544
+    25/25 [==============================] - 0s 352us/step - loss: 4.8120 - accuracy: 0.3537
 
     <keras.callbacks.History>
